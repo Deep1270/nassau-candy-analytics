@@ -47,6 +47,7 @@ with tab2:
     fig2.update_layout(yaxis_title="Total Value ($)")
     st.plotly_chart(fig2, use_container_width=True)
 with tab3:
+    st.subheader("Cost vs Sales Scatter Analysis")
     fig3 = px.scatter(
         df, 
         x='Cost', 
