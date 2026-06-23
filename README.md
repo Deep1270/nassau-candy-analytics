@@ -5,7 +5,7 @@ This project provides data-driven visibility into product profitability, divisio
 and supply chain diagnostic tracking for Nassau Candy Distributor. 
 
 ## Live Application
-🔗 [Click Here to View the Live Streamlit Dashboard]([https://your-app-url.streamlit.app](https://2snpxfqs4u3ngowzv7m8qy.streamlit.app/#cost-vs-sales-scatter-analysis))
+🔗 [Click Here to View the Live Streamlit Dashboard](https://2snpxfqs4u3ngowzv7m8qy.streamlit.app/#cost-vs-sales-scatter-analysis)
 
 ## Project Architecture
 - `data/`: Contains raw and cleaned order data.
