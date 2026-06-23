@@ -18,7 +18,6 @@ col1.metric("Total Sales", f"${df['Sales'].sum():,.2f}")
 col2.metric("Total Profit", f"${df['Gross Profit'].sum():,.2f}")
 col3.metric("Avg Gross Margin", f"{df['Gross Margin (%)'].mean():.2f}%")
 tab1, tab2, tab3 = st.tabs(["Product Profitability", "Division Performance", "Cost Diagnostics"])
-
 with tab1:
     st.subheader("Product-Level Margin Leaderboard")
     margin_data = df.groupby('Product Name')['Gross Margin (%)'].mean().reset_index()
@@ -29,7 +28,7 @@ with tab1:
         y='Product Name', 
         orientation='h',
         color='Gross Margin (%)',
-        color_continuous_scale='RdYlGn', # Red to Green color scale
+        color_continuous_scale='RdYlGn',
         text_auto='.2f'
     )
     fig1.update_layout(xaxis_title="Gross Margin (%)", yaxis_title="")
@@ -42,13 +41,12 @@ with tab2:
         x='Division', 
         y=['Sales', 'Gross Profit'],
         barmode='group',
-        color_discrete_sequence=['#34495e', '#27ae60'], # Professional blue and green
+        color_discrete_sequence=['#34495e', '#27ae60'],
         labels={'value': 'Amount ($)', 'variable': 'Metric'}
     )
     fig2.update_layout(yaxis_title="Total Value ($)")
     st.plotly_chart(fig2, use_container_width=True)
 with tab3:
-    st.subheader("Cost vs Sales Scatter Analysis")
     fig3 = px.scatter(
         df, 
         x='Cost', 
